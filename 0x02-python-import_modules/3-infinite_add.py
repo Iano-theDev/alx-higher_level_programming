@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     from sys import argv
-    add = 0
-    for num in argv[1:]:
-        add += int(num)
-    print("{:d}".format(add))
+    count = 1
+    total = 0
+    while count < len(argv):
+        total += int(argv[count])
+        count += 1
+    print("{:d}".format(total))
