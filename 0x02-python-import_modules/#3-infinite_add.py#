@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+if __name__ == "__main__":
+    from sys import argv
+    count = 1
+    total = 0
+    while count < len(argv):
+        total += int(argv[count])
+        count += 1
+9    print("{:d}".format(total))
