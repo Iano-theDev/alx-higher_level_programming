@@ -1,0 +1,15 @@
+#!/usr/bin/python3
+def max_integer(my_list=[]):
+    a = None
+    if not my_list:
+        return None
+    else:
+        a = my_list[0]
+        for n in my_list:
+            print(f'a before check is {a}')
+            if n > a:
+                print(f'a after check is {a}')
+                a = n
+            else:
+                continue
+    return a;
