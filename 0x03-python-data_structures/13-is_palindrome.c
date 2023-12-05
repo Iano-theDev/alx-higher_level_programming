@@ -56,6 +56,7 @@ listint_t *reverse_list(listint_t **head)
 
 	return (*head);
 }
+
 /**
 * copy_list - returns a copy of a listint_t list
 * @head: pointer to the head of a listint_t list
@@ -83,7 +84,10 @@ listint_t *copy_list(listint_t **head)
 			ptr->next = malloc(sizeof(listint_t));
 
 			if (ptr->next == NULL)
+			{
+				free_listint(new);
 				return (NULL);
+			}
 			ptr = ptr->next;
 		}
 		ptr->next = NULL;
