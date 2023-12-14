@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+def safe_print_list(my_list=[], x=0):
+    try:
+        for n, i in enumerate(my_list):
+            print(n)
+            if i == x:
+                return i
+            else:
+                raise Exception
+    except Exception as e:
+        pass
+    
