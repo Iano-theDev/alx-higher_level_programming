@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-class Square:
+''' This is a representation of a square'''
 
-    def __init__(self):
-        pass
+class Square:
+    ''' Empty Square class'''
+    pass
+
