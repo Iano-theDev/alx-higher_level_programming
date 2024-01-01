@@ -75,7 +75,7 @@ class Square:
         """Setter for the poistion
         Args:
             value(tuple): A tuple of two positive ints
-        
+
         Return:
             Null"""
         if len(value) != 2 or value[0] < 0 and value[1] < 0:
