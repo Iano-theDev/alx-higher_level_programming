@@ -35,7 +35,7 @@ class Node:
         Args:
             value(Node): a node of type Node
         """
-        if isinstance(value, Node) is False:
+        if value is not None and type(value) is not Node:
             raise TypeError("next_node must be a Node object")
         else:
             self.__next_node = value
@@ -53,11 +53,36 @@ class SinglyLinkedList:
         self.__head = None
 
     def sorted_insert(self, value):
-        """Inserts a new NOde into the correct sorted position
+        """Inserts a new Node into the correct sorted position
            in the list according to increasing order
         Args:
             value(Node): node to be inserted in the list
         Return:
             A sorted SinglyLinkedList list."""
-        
-        
+        new = Node(value)
+        tmp = self.__head
+        if tmp is None and tmp.data >= value:
+            if tmp:
+                new.next_node = tmp
+            self.__head = new
+            return
+        while tmp.next_node is not None:
+            if tmp.next_node.data >= value:
+                break
+            tmp = tmp.next_node
+        new.next_node = tmp
+        tmp.next_node = new
+                
+    def __str__(self):
+        """String representation of the singly-linked-list
+        Returns:
+            A str-representation of data nodes in the list
+        """
+        data_str = ""
+        ptr = self.__head
+        while ptr is not None:
+            data_str += str(ptr.data)
+            if ptr.next_node is not None:
+                data_str += "\n"
+            ptr = ptr.next_node
+        return data_str
