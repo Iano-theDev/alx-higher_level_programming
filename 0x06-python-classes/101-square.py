@@ -90,13 +90,8 @@ class Square:
     def __str__(self):
         """Returns a printable string value for a square instance
         """
-        square = ""
         if self.size == 0:
-            return square
-        square += "\n" * self.__position[1]
-        for n in range(self.__size):
-            if n != 0:
-                square += "\n"
-            square += " " * self.__position[0]
-            square += "#" * self.__size
-        return square
+            return ""
+        return ("\n" * self.__position[1] +
+                (" " * self.__position[0] +
+                 "#" * self.__size + "\n") * self.size)[:-1]
