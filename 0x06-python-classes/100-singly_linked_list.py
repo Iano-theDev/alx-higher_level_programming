@@ -24,6 +24,7 @@ class Node:
             raise TypeError("data must be an integer")
         else:
             self.__data = value
+
     @property
     def next_node(self):
         """Getter for the next node"""
@@ -45,7 +46,8 @@ class Node:
         Return:
             A formated string representating a Node"""
         return str(self.__data)
-        
+
+
 class SinglyLinkedList:
     """Represents a singly linked list"""
     def __init__(self):
@@ -60,19 +62,19 @@ class SinglyLinkedList:
         Return:
             A sorted SinglyLinkedList list."""
         new = Node(value)
-        tmp = self.__head
-        if tmp is None and tmp.data >= value:
-            if tmp:
-                new.next_node = tmp
+        node = self.__head
+
+        if node is None or node.data >= value:
+            new.next_node = node
             self.__head = new
             return
-        while tmp.next_node is not None:
-            if tmp.next_node.data >= value:
+        while node.next_node is not None:
+            if node.next_node.data >= value:
                 break
-            tmp = tmp.next_node
-        new.next_node = tmp
-        tmp.next_node = new
-                
+            node = node.next_node
+        new.next_node = node.next_node
+        node.next_node = new
+
     def __str__(self):
         """String representation of the singly-linked-list
         Returns:
