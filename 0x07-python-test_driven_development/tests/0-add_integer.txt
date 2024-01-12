@@ -1,0 +1,26 @@
+The ``add_integer`` module
+==========================
+
+Using ``add_integer``
+--------------------------
+
+importing the function from the module:
+	  >>> add_integer = __import__("0-add_integer").add_integer
+
+Check for module documentation:
+      	  >>> m = __import__("0-add_integer")
+	  >>> len(m) > 1
+	  True
+
+Check for function documentation:
+      	  >>> f = __import__("0-add_integer").add_integer
+	  >>> len(f) > 1
+	  True
+
+Check for both argument:
+      	  >>> add_integer(2, 3)
+	  5
+
+Check for a negative argument:
+      	  >>> add_integer(3, -5)
+	  -2
