@@ -24,3 +24,13 @@ Check for both argument:
 Check for a negative argument:
       	  >>> add_integer(3, -5)
 	  -2
+
+Missing one argument `a`:
+	  >>> add_integer()
+	  Traceback (most recent call last):
+	  ...
+	  TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Check for passing single argument `a`:
+      	  >>> add_integer(2)
+	  100
