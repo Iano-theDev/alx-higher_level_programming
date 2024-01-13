@@ -8,12 +8,12 @@ importing the function from the module:
 	  >>> add_integer = __import__("0-add_integer").add_integer
 
 Check for module documentation:
-      	  >>> m = __import__("0-add_integer")
+      	  >>> m = __import__("0-add_integer").__doc__
 	  >>> len(m) > 1
 	  True
 
 Check for function documentation:
-      	  >>> f = __import__("0-add_integer").add_integer
+      	  >>> f = __import__("0-add_integer").add_integer.__doc__
 	  >>> len(f) > 1
 	  True
 
