@@ -74,3 +74,15 @@ Check for argument `b` as None:
 	  Traceback (most recent call last):
 	  ...
 	  TypeError: b must be an integer
+
+Check for argument `a` as inf:
+      	  >>> add_integer(float('inf'))
+	  Traceback (most recent call last):
+	  ...
+	  OverflowError: cannot convert float infinity to integer
+
+Check for argument `a` as NaN:
+      	  >>> add_integer(float('NaN'))
+	  Traceback (most recent call last):
+	  ...
+	  ValueError: cannot convert float NaN to integer
