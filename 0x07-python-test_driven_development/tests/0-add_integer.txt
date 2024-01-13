@@ -21,9 +21,17 @@ Check for both argument:
       	  >>> add_integer(2, 3)
 	  5
 
-Check for a negative argument:
+Check for a negative argument `a`:
+      	  >>> add_integer(-5, 3)
+	  -2
+
+Check for a negative argument `b`:
       	  >>> add_integer(3, -5)
 	  -2
+
+Check for both negative arguments:
+      	  >>> add_integer(-3, -5)
+	  -8
 
 Missing one argument `a`:
 	  >>> add_integer()
@@ -34,3 +42,35 @@ Missing one argument `a`:
 Check for passing single argument `a`:
       	  >>> add_integer(2)
 	  100
+
+Check for argument `b` as string:
+      	  >>> add_integer(5, "a string")
+	  Traceback (most recent call last):
+	  ...
+	  TypeError: b must be an integer
+
+Check for arguement `a` as a string:
+      	  >>> add_integer("a string", 4)
+	  Traceback (most recent call last):
+          ...
+          TypeError: a must be an integer
+
+Check for argument `a` as float:
+      	  >>> add_integer(2.56, 3)
+	  5
+
+Check for argument `b` as float:
+      	  >>> add_integer(3, 2.56)
+	  5
+
+Check for argument `a` as None:
+      	  >>> add_integer(None)
+	  Traceback (most recent call last):
+	  ...
+	  TypeError: a must be an integer
+
+Check for argument `b` as None:
+      	  >>> add_integer(2, None)
+	  Traceback (most recent call last):
+	  ...
+	  TypeError: b must be an integer

@@ -3,10 +3,11 @@
 Addition module
 """
 
+
 def add_integer(a, b=98):
     """
     Adds two integers and returns the result
-    
+
     Parameters:
     a (int): first integer
     b (int): second integer
