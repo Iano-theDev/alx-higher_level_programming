@@ -64,4 +64,4 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return rect
         rect = ("".join(["#" for n in range(self.width)]) + "\n") * self.height
-        return rect
+        return rect[:-1]
