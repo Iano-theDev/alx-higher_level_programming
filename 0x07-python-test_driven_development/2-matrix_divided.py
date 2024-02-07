@@ -14,7 +14,6 @@ def matrix_divided(matrix, div):
     a list of lists of integers divided with div
     """
     new_matrix = []
-    div_list = [div]
     for n in matrix:
-        new_matrix.append(list(map(lambda a, b: a / b, n, div_list)))
+        new_matrix.append(list(map(lambda x: round(x / div, 2), n)))
     return new_matrix
