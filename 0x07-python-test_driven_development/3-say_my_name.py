@@ -4,7 +4,7 @@
 
 def say_my_name(first_name, last_name=""):
     """Prints the full name of a person
-    
+
     Args:
         first_name (string): The first name
         last_name (string): The last name, default is empty string

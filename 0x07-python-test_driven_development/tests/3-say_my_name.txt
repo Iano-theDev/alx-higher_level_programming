@@ -39,3 +39,9 @@ Passing last_name as None:
      Traceback (most recent call last):
      ...
      TypeError: last_name must be a string
+
+Missing both arguments:
+	>>> say_my_name()
+	Traceback (most recent call last):
+	...
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
