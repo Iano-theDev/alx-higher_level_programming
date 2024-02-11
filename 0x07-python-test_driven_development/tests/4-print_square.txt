@@ -1,0 +1,39 @@
+The `Print_square` test module
+==============================
+
+importing the function:
+	  >>> print_square = __import__("4-print_square").print_square
+
+Check for module documentation:
+      >>> m = __import__("4-print_square").__doc__
+      >>> len(m) > 1
+      True
+
+Check for function documentation:
+      >>> f = __import__("4-print_square").print_square.__doc__
+      >>> len(f) > 1
+      True
+
+Passing size as a string:
+	>>> size = "five"
+	>>> print_square(size)
+	Traceback (most recent call last):
+	...
+	TypeError: size must be an integer
+
+Passing size as a int less than 0:
+	>>> size = -5
+	>>> print_square(size)
+	Traceback (most recent call last):
+	...
+	ValueError: size must be >= 0
+
+Passing size as a positve integer:
+	>>> size = 5
+	>>> print_square(size)
+	#####
+	#####
+	#####
+	#####
+	#####
+
