@@ -1,0 +1,39 @@
+The `5-text_indentation` test module
+====================================
+
+importing the module:
+	  >>> indent = __import__('5-text_indentation').text_indentation
+
+Check for module documentation:
+      >>> m = __import__('5-text_indentation').__doc__
+      >>> len(m) > 1
+      True
+
+Check for function documentation:
+      >>> f = __import__('5-text_indentation').text_indentation.__doc__
+      >>> len(f) > 1
+      True
+
+Testing with a single space after tokens:
+	>>> string = "Hello!? this is: Ian. Testing"
+	>>> indent(string)
+	Hello!?
+	<BLANKLINE>
+	this is:
+	<BLANKLINE>
+	Ian.
+	<BLANKLINE>
+	Testing
+
+Passing a number to the function:
+	>>> string = 255
+	>>> indent(string)
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+
+Calling the function without an argument:
+	>>> indent()
+	Traceback (most recent call last):
+	...
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
