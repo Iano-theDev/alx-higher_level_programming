@@ -6,7 +6,7 @@ def text_indentation(text):
     """Prints a text with 2 new lines after each of these
        characters: . or ? and :
     """
-    chars  = ['.', '?', ':']
+    chars = ['.', '?', ':']
     end = False
     if type(text) is not str:
         raise TypeError("text must be a string")
@@ -15,7 +15,7 @@ def text_indentation(text):
             print(char + '\n')
             end = True
         elif end and char == ' ':
-            continue;
+            continue
         else:
             end = False
             print(char, end="")
