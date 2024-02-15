@@ -40,6 +40,15 @@ class TestMaxInteger(unittest.TestCase):
         """Passing None as an argument"""
         with self.assertRaises(TypeError):
             max_integer(None)
+    def test_max_at_start(self):
+        """Testing for max at the begining of the list"""
+        l = [23, 4, 7, 19, 1]
+        self.assertEqual(max_integer(l), 23)
+
+    def test_single_item(self):
+        """Test for a list with only one item"""
+        l = [23]
+        self.assertEqual(max_integer(l), 23)
 
 
 if __name__ == '__main__':
