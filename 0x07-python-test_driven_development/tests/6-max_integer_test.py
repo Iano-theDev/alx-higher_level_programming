@@ -13,7 +13,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertGreater(len(m), 1)
 
     def test_function_documentation(self):
-        """Cheeck for function documentation"""
+        """Check for function documentation"""
         f = max_integer.__doc__
         self.assertTrue((len(f) > 1), 1)
 
@@ -21,6 +21,26 @@ class TestMaxInteger(unittest.TestCase):
         """Test with an ordered list"""
         l = [1, 2, 3, 4, 5]
         self.assertEqual(max_integer(l), 5)
-    
+
+    def test_unsorted_list(self):
+        """Test with unsorted list"""
+        l = [34, 1, 5, 65, 10]
+        self.assertEqual(max_integer(l), 65)
+
+    def test_all_negative(self):
+        """Test with a list of all negative integers"""
+        l = [-5, -1, -67, -9]
+        self.assertEqual(max_integer(l), -1)
+
+    def test_empty_list(self):
+        """Test with an empty list"""
+        l = []
+        self.assertIsNone(max_integer(l))
+    def test_None(self):
+        """Passing None as an argument"""
+        with self.assertRaises(TypeError):
+            max_integer(None)
+
+
 if __name__ == '__main__':
     unittest.main()
