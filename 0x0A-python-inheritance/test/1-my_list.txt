@@ -1,0 +1,44 @@
+```test for my_list module```
+-----------------------------
+
+Import MyList class:
+       >>> mylist = __import__("1-my_list").MyList
+
+Check for module documentation:
+      >>> m = __import__("1-my_list").__doc__
+      >>> len(m) > 1
+      True
+
+Test for class documentations:
+      >>> c = mylist.__doc__
+      >>> len(c) > 1
+      True
+
+Check that it inherits from list class:
+      >>> x = issubclass(mylist, list)
+      >>> x
+      True
+
+Test with an empty string:
+     >>> l = mylist()
+     >>> l.print_sorted()
+     []
+
+Test with single item in list:
+     >>> l = mylist()
+     >>> l.append(2)
+     >>> l.print_sorted()
+     [2]
+
+Test with 4 list items:
+     >>> l = mylist()
+     >>> l.append(3)
+     >>> l.append(7)
+     >>> l.append(2)
+     >>> l.append(0)
+     >>> l.print_sorted()
+     [0, 2, 3, 7]
+
+
+
+
