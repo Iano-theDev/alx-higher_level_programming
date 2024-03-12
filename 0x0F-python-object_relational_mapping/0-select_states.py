@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-SCript to list all states from the database
+Script to list all states from the database
 """
 
 import MySQLdb
