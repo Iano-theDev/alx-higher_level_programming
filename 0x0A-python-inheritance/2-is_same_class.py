@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Is same class module"""
+"""Is exactly  same class module"""
 
 
 def is_same_class(obj, a_class):
