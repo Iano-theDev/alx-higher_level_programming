@@ -21,6 +21,35 @@ Test validator with string:
      ...
      TypeError: height must be an integer
 
+Test validator with string:
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("height", [0])
+     Traceback (most recent call last):
+     ...
+     TypeError: height must be an integer
+
+Test validator with string:
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("height", {3, 4})
+     Traceback (most recent call last):
+     ...
+     TypeError: height must be an integer
+
+Test validator with string:
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("height", "my string")
+     Traceback (most recent call last):
+     ...
+     TypeError: height must be an integer
+
+Test validator with string:
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("height", True)
+     Traceback (most recent call last):
+     ...
+     TypeError: height must be an integer
+
+
 Test validator with negative integer:
      >>> bg = BaseGeometry()
      >>> bg.integer_validator("height", -5)
@@ -28,8 +57,38 @@ Test validator with negative integer:
      ...
      ValueError: height must be greater than 0
 
+Test validator with no parameters:
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("height", 0)
+     Traceback (most recent call last):
+     ...
+     ValueError: height must be greater than 0
+
+Test validator with 1 parameter:
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("height")
+     Traceback (most recent call last):
+     ...
+     TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+
+Test validator with 0:
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator()
+     Traceback (most recent call last):
+     ...
+     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+
 Test validator with int greater than 0:
      >>> bg = BaseGeometry()
      >>> bg.integer_validator("height", 5)
      
      
+Test area:
+     >>> bg = BaseGeometry()
+     >>> bg.area()
+     Traceback (most recent call last):
+     ...
+     Exception: area() is not implemented
+
