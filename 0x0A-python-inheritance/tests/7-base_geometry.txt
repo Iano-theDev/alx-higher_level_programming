@@ -50,6 +50,21 @@ Test validator with string:
      TypeError: height must be an integer
 
 
+Test validator with string:
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("height", None)
+     Traceback (most recent call last):
+     ...
+     TypeError: height must be an integer
+
+Test validator with string:
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("height", (4,))
+     Traceback (most recent call last):
+     ...
+     TypeError: height must be an integer
+
+
 Test validator with negative integer:
      >>> bg = BaseGeometry()
      >>> bg.integer_validator("height", -5)
