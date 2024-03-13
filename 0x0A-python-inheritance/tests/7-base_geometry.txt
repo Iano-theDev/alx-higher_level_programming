@@ -1,0 +1,35 @@
+```Base geometry test module```
+--------------------------------
+
+Importing the class:
+	  >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+Test for module docstring:
+     >>> m = __import__("7-base_geometry").__doc__
+     >>> len(m) > 1
+     True
+
+Test for class docstring:
+     >>> c = __import__("7-base_geometry").BaseGeometry.__doc__
+     >>> len(c) > 1
+     True
+
+Test validator with string:
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("height", "my string")
+     Traceback (most recent call last):
+     ...
+     TypeError: height must be an integer
+
+Test validator with negative integer:
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("height", -5)
+     Traceback (most recent call last):
+     ...
+     ValueError: height must be greater than 0
+
+Test validator with int greater than 0:
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("height", 5)
+     
+     
