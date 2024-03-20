@@ -8,4 +8,4 @@ argList = []
 for arg in sys.argv:
     argList.append(arg)
 save_json_file(argList[1:], "add_item.json")
-print(load_json("add_item.json"))
+load_json("add_item.json")
