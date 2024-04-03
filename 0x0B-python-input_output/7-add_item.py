@@ -10,6 +10,6 @@ try:
 except Exception:
     argList = []
 
-for arg in sys.argv:
+for arg in sys.argv[1:]:
     argList.append(arg)
-save_json_file(argList[1:], filename)
+save_json_file(argList, filename)
