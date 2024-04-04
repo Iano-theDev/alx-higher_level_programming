@@ -27,6 +27,6 @@ class Student:
         from the json"""
         for key, value in json.items():
             try:
-                self.key = value
+                setattr(self, key, value)
             except Exception:
                 pass
