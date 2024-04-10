@@ -24,7 +24,9 @@ class Rectangle(Base):
     def width(self, value):
         """setter for the private instance attribute width"""
         if type(value) is not int:
-            raise TypeError("Width must be an integer")
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
         else:
             self.__width = value
 
@@ -37,7 +39,9 @@ class Rectangle(Base):
     def height(self, value):
         """setter for the private instance attribute height"""
         if type(value) is not int:
-            raise TypeError("Height must be an integer")
+            raise TypeError("height must be an integer")
+        if value <= 0:
+            raise ValueError("height must be > 0")
         else:
             self.__height = value
 
@@ -49,7 +53,12 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """setter for lattitude position of the rectangle"""
-        self.__x = value
+        if type(value) is not int:
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
+        else:
+            self.__x = value
 
     @property
     def y(self):
@@ -59,4 +68,9 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """setter for longitude position of the rectangle"""
-        self.__y = value
+        if type(value) is not int:
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
+        else:
+            self.__y = value
