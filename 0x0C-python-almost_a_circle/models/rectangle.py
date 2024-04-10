@@ -59,4 +59,4 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """setter for longitude position of the rectangle"""
-        self.__x = value
+        self.__y = value
