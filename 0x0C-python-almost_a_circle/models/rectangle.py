@@ -49,11 +49,8 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """setter for lattitude position of the rectangle"""
-        if type(value) is not int:
-            raise TypeError("x must be an integer")
-        else:
-            self.__x = value
-
+        self.__x = value
+            
     @property
     def y(self):
         """A getter for the private instance attribute y (logitude position)"""
@@ -62,7 +59,4 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """setter for longitude position of the rectangle"""
-        if type(value) is not int:
-            raise TypeError("y must be an integer")
-        else:
-            self.__x = value
+        self.__x = value
