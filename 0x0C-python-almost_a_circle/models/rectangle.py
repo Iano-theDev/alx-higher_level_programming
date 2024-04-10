@@ -83,3 +83,10 @@ class Rectangle(Base):
         """prints a representation of the rectangle using the '#' character"""
         rect = (((self.__width * "#") + '\n') * self.__height)[:-1]
         print(rect)
+
+    def __str__(self):
+        """Return the string representation of a rectangle"""
+        rect = "[Rectangle] " + "(" + str(self.id) + ")" + " " +\
+            str(self.x) + "/" + str(self.y) + " - " +\
+            str(self.width) + "/" + str(self.height)
+        return rect
