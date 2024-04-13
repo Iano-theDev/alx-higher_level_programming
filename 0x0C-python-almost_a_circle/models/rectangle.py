@@ -90,7 +90,7 @@ class Rectangle(Base):
     def __str__(self):
         """Return the string representation of a rectangle"""
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} \
-        - {self.width}/{self.height}"
+- {self.width}/{self.height}"
 
     def update(self, *args):
         """Assigns an argument to each attribute of rectangle instance
