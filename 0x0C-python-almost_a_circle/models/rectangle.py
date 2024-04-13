@@ -99,7 +99,7 @@ class Rectangle(Base):
         3rd arg: height,
         4th arg: x,
         5th arg: y
-        
+
         Assigns attributes according to key word arguments passed
         """
         if len(args) > 0:
