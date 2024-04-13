@@ -81,12 +81,13 @@ class Rectangle(Base):
 
     def display(self):
         """prints a representation of the rectangle using the '#' character"""
-        rect = (((self.__width * "#") + '\n') * self.__height)[:-1]
-        print(rect)
+        pos_x = (self.x * " ")
+        pos_y = (self.y * '\n')
+        rect = ((pos_x + (self.__width * "#") + '\n') * self.__height)[:-1]
+
+        print(pos_y + rect)
 
     def __str__(self):
         """Return the string representation of a rectangle"""
-        rect = "[Rectangle] " + "(" + str(self.id) + ")" + " " +\
-            str(self.x) + "/" + str(self.y) + " - " +\
-            str(self.width) + "/" + str(self.height)
-        return rect
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} \
+- {self.width}/{self.height}"
