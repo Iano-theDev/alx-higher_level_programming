@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Rectangle class module"""
+import json
 from models import base
 
 Base = base.Base
@@ -115,3 +116,7 @@ class Rectangle(Base):
 
         for key, value in kwargs.items():
             setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Returns a dictionary representation of a Rectangle"""
+        return self.__dict__
